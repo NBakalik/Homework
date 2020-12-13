@@ -4,18 +4,18 @@ using namespace std;
 
 void Elections::Set_candidates()
 {
-	for (int i = 0; i < 5; i++)
+	for (auto& i : arr)
 	{
-		cin >> arr[i].name;
-		cin >> arr[i].vote;
-		sum += arr[i].vote;
+		cin >> i.name;
+		cin >> i.vote;
+		sum += i.vote;
 	}
 }
 void Elections::Get_candidates()
 {
-	for (int i = 0; i < 5; i++)
+	for (auto j : arr)
 	{
-		cout << arr[i].name << " " << arr[i].vote <<" "<< arr[i].vote * 100 / sum <<endl;;
+		cout << j.name << " " << j.vote << " " << j.vote * 100 / sum << endl;;
 	}
 }
 void Elections::Get_Winner()
